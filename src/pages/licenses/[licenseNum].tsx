@@ -100,17 +100,17 @@ function LicenseDetails({ info }) {
             />
           </div>
         </div>
-        <div className="grid grid-cols-2 pr-10">
+        <div className="grid grid-cols-2 pr-10 m-auto">
           <div className="border border-black p-3">Image Name: </div>
-          <div className="border border-black p-3">{info.imageName}</div>
+          <div className="border border-black p-3 overflow-hidden">{info.imageName}</div>
           <div className="border border-black p-3">
             License Plate from OCR:{" "}
           </div>
-          <div className="border border-black p-3">{info.LPOCR}</div>
+          <div className="border border-black p-3 overflow-hidden">{info.LPOCR}</div>
           <div className="border border-black p-3">UTC Date of Capture: </div>
-          <div className="border border-black p-3">{TimeInfo[0]}</div>
+          <div className="border border-black p-3 overflow-hidden">{TimeInfo[0]}</div>
           <div className="border border-black p-3">UTC Time of Capture: </div>
-          <div className="border border-black p-3">
+          <div className="border border-black p-3 overflow-hidden">
             {TimeInfo[1].replace("+00:00", "")}
           </div>
           <div className="border border-black p-3">Fined: </div>
