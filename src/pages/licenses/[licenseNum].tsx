@@ -79,7 +79,7 @@ function LicenseDetails({ info }) {
           </Menu>
         </div>
       </div>
-      <div className="flex justify-center items-center h-full grid grid-cols-2">
+      <div className="flex flex-col justify-center items-center h-full sm:grid sm:grid-cols-2">
         <div className="w-3/5 m-auto">
           <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
             <Image
