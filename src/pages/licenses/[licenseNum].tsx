@@ -100,7 +100,7 @@ function LicenseDetails({ info }) {
             />
           </div>
         </div>
-        <div className="grid grid-cols-2 pr-10 m-auto">
+        <div className="grid grid-cols-2 pr-10 m-auto flex items-center justify-center">
           <div className="border border-black p-3">Image Name: </div>
           <div className="border border-black p-3 overflow-hidden">{info.imageName}</div>
           <div className="border border-black p-3">
