@@ -25,7 +25,7 @@ function Home() {
         <Head>
           <title>Signin Page</title>
         </Head>
-        <div className="m-auto relative bg-white w-3/12 shadow-lg rounded-md">
+        <div className="m-auto relative bg-white w-3/12 sm:w-full shadow-lg rounded-md">
           <div className="m-4">
             <Auth
               supabaseClient={supabase}
