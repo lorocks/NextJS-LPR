@@ -71,7 +71,7 @@ function MainPage({ profileList, user, fineNum }) {
                         href={{
                           pathname: `/licenses/${profile.imageName}`,
                         }}
-                        className="border p-2 text-red-500"
+                        className="border p-2 text-red-500 overflow-hidden"
                       >
                         {profile.imageName}
                       </Link>
@@ -80,13 +80,13 @@ function MainPage({ profileList, user, fineNum }) {
                         href={{
                           pathname: `/licenses/${profile.imageName}`,
                         }}
-                        className="border p-2 text-green-600"
+                        className="border p-2 text-green-600 overflow-hidden"
                       >
                         {profile.imageName}
                       </Link>
                     )}
-                    <div className="border p-2">{profile.LPOCR}</div>
-                    <div className="border p-2">
+                    <div className="border p-2 overflow-hidden">{profile.LPOCR}</div>
+                    <div className="border p-2 overflow-hidden">
                       {profile.CaptureTime.replace("T", "  ").replace(
                         "+",
                         "  +"
