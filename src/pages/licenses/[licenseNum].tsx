@@ -32,7 +32,7 @@ function LicenseDetails({ info }) {
     <div className="relative flex flex-col h-screen w-full bg-orange-100">
       <div className="sticky w-full h-fit top-0 flex flex-row bg-orange-400">
         <div className="flex flex-row w-full space-x-2 p-2 z-40">
-          <Menu as="div" className="relative inline-block w-full text-left z-30">
+          <Menu as="div" className="relative inline-block w-full text-left ">
             <div className="flex justify-end">
               <Menu.Button className="justify-center rounded-md px-4 py-1 text-white bg-black bg-opacity-20 hover:bg-opacity-40 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
                 Options
@@ -47,7 +47,7 @@ function LicenseDetails({ info }) {
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <Menu.Items className="absolute z-30 right-0 mt-2 w-40 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+              <Menu.Items className="absolute z-50 right-0 mt-2 w-40 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                 <div className="px-1 py-1 ">
                   <Menu.Item>
                     {({ active }) => (
