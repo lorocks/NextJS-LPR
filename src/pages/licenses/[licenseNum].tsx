@@ -31,8 +31,8 @@ function LicenseDetails({ info }) {
   return (
     <div className="relative flex flex-col h-screen w-full bg-orange-100">
       <div className="sticky w-full h-fit top-0 flex flex-row bg-orange-400">
-        <div className="flex flex-row w-full space-x-2 p-2">
-          <Menu as="div" className="relative inline-block w-full text-left">
+        <div className="flex flex-row w-full space-x-2 p-2 z-40">
+          <Menu as="div" className="relative inline-block w-full text-left z-30">
             <div className="flex justify-end">
               <Menu.Button className="justify-center rounded-md px-4 py-1 text-white bg-black bg-opacity-20 hover:bg-opacity-40 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
                 Options
@@ -91,7 +91,7 @@ function LicenseDetails({ info }) {
               fill
               // objectFit="cover"
               className={cn(
-                "duration-700 ease-in-out group-hover:opacity-75",
+                "duration-700 ease-in-out group-hover:opacity-75 z-0",
                 isLoading
                   ? "scale-110 blur-2xl grayscale"
                   : "scale-100 blur-0 grayscale-0"
