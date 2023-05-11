@@ -49,7 +49,7 @@ function MainPage({ profileList, user, fineNum }) {
             </button>
           </div>
         </div>
-        <div className="sticky px-4 pt-3 top-12 w-full h-fit items-center justify-center bg-orange-100">
+        <div className="sticky px-4 pt-6 sm:pt-3 top-12 w-full h-fit items-center justify-center bg-orange-100">
           <div className="flex flex-row grid grid-cols-3 bg-white rounded-t-3xl overflow-hidden">
             <div className="flex justify-center border p-2">Image URL</div>
             <div className="flex justify-center border p-2">Plate Values</div>
