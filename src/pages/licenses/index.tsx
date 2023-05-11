@@ -30,11 +30,11 @@ function MainPage({ profileList, user, fineNum }) {
       <div className="flex flex-col h-auto min-h-screen w-full relative">
         <Header user={session?.user.email} />
         <div className="sticky py-2 px-5 top-0 w-full h-fit flex flex-row items-center justify-center bg-orange-400 justify-between">
-          <div className="text-white">
+          <div className="text-white p-1">
             Number of Plates Detected: {plateNum}
           </div>
-          <div className="text-white">Total Fines: {fineNum}</div>
-          <div className="space-x-2">
+          <div className="text-white p-1">Total Fines: {fineNum}</div>
+          <div className="space-x-2 p-1">
             <button
               className="relative bg-black bg-opacity-20 hover:bg-opacity-40 text-white px-4 py-1 rounded"
               onClick={getFined}
