@@ -48,13 +48,16 @@ function Test({ info }) {
       }),
     })
       .then((response) => response.json())
-      .then((json) => editResponse(json))
+      .then((json) => editResponseAPI(json))
       .catch((error) => console.log(error.message));
   }
 
   function editResponse(info) {
-    console.log(info);
     setRespVal(info);
+  }
+
+  function editResponseAPI(info) {
+    setRespVal(info.comments);
   }
 
   async function handleClick(e) {
