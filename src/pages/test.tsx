@@ -48,7 +48,7 @@ function Test({ info }) {
       }),
     })
       .then((response) => response.json())
-      .then((json) => alert(json))
+      .then((json) => editResponse(json))
       .catch((error) => console.log(error.message));
   }
 
