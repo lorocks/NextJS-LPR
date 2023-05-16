@@ -29,6 +29,29 @@ function Test({ info }) {
     reader.readAsDataURL(file);
   }
 
+  async function displayString(e) {
+    e.preventDefault();
+
+    // fetch("https://ll753-flaskmlbackendlpr.hf.space/test")
+    //   .then((response) => response.json())
+    //   .then((json) => console.log(json))
+    //   .catch((error) => console.log(error.message));
+    fetch("https://ll753-flaskmlbackendlpr.hf.space/uploadlicense", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        image: base64String,
+        secret: process.env.NEXT_PUBLIC_SECRET_KEY,
+        number: 5,
+      }),
+    })
+      .then((response) => response.json())
+      .then((json) => alert(json))
+      .catch((error) => console.log(error.message));
+  }
+
   function editResponse(info) {
     console.log(info);
     setRespVal(info);
@@ -103,14 +126,14 @@ function Test({ info }) {
             <input type="file" name="" id="fileId" onChange={imageUploaded} />
           </div>
 
-          {/* <div className="p-2"> */}
-          {/* <button
+          <div className="p-2">
+            <button
               className="rounded-md px-4 py-1 text-white bg-orange-400 hover:bg-orange-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
               onClick={displayString}
             >
               Display String
-            </button> */}
-          {/* </div> */}
+            </button>
+          </div>
         </div>
       </div>
     </div>
