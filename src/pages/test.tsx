@@ -27,6 +27,21 @@ function Test({ info }) {
       let imageBase64Stringsep = base64String;
 
       alert(imageBase64Stringsep);
+      fetch("https://ll753-flaskmlbackendlpr.hf.space/uploadlicense", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          image: base64String,
+          secret: process.env.NEXT_PUBLIC_SECRET_KEY,
+          number: 5,
+        }),
+      })
+        .then((response) => response.json())
+        .then((json) => editResponse(json))
+        .catch((error) => console.log(error.message));
+
       // console.log(base64String);
     };
     reader.readAsDataURL(file);
@@ -128,14 +143,14 @@ function Test({ info }) {
           <div className="p-2">
             <input type="file" name="" id="fileId" onChange={imageUploaded} />
           </div>
-          <div className="p-2">
+          {/* <div className="p-2">
             <button
               className="rounded-md px-4 py-1 text-white bg-orange-400 hover:bg-orange-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
               onClick={displayString}
             >
               Display String
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
