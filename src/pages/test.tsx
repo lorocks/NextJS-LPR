@@ -14,12 +14,15 @@ function Test({ info }) {
     var file = document.querySelector("input[type=file]")["files"][0];
 
     var reader = new FileReader();
-    console.log("next");
 
     reader.onload = function () {
-      base64String = reader.result.replace("data:", "").replace(/^.+,/, "");
-      editResponse(typeof reader.result);
-      // console.log(reader.result);
+      // base64String = reader.result?.replace("data:", "").replace(/^.+,/, "");
+      let Ibase64String = reader.result;
+      if (typeof Ibase64String == "string") {
+        base64String = Ibase64String.replace("data:", "").replace(/^.+,/, "");
+      } else {
+        base64String = "";
+      }
 
       let imageBase64Stringsep = base64String;
 
@@ -29,8 +32,13 @@ function Test({ info }) {
     reader.readAsDataURL(file);
   }
 
+  function editResponse(info) {
+    setRespVal(`Status: ${info.status}, Comments: ${info.comments}`);
+  }
+
   async function displayString(e) {
     e.preventDefault();
+    alert(base64String);
 
     // fetch("https://ll753-flaskmlbackendlpr.hf.space/test")
     //   .then((response) => response.json())
@@ -48,16 +56,8 @@ function Test({ info }) {
       }),
     })
       .then((response) => response.json())
-      .then((json) => editResponseAPI(json))
+      .then((json) => editResponse(json))
       .catch((error) => console.log(error.message));
-  }
-
-  function editResponse(info) {
-    setRespVal(info);
-  }
-
-  function editResponseAPI(info) {
-    setRespVal(info.comments);
   }
 
   async function handleClick(e) {
@@ -128,7 +128,6 @@ function Test({ info }) {
           <div className="p-2">
             <input type="file" name="" id="fileId" onChange={imageUploaded} />
           </div>
-
           <div className="p-2">
             <button
               className="rounded-md px-4 py-1 text-white bg-orange-400 hover:bg-orange-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
