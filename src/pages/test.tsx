@@ -39,7 +39,6 @@ function Test({ info }) {
   async function displayString(e) {
     e.preventDefault();
     alert(base64String);
-    alert(mageBase64Stringsep);
 
     // fetch("https://ll753-flaskmlbackendlpr.hf.space/test")
     //   .then((response) => response.json())
