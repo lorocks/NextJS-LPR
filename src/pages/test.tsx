@@ -19,10 +19,11 @@ function Test({ info }) {
     reader.onload = function () {
       base64String = reader.result.replace("data:", "").replace(/^.+,/, "");
       editResponse(typeof reader.result);
+      // console.log(reader.result);
 
       let imageBase64Stringsep = base64String;
 
-      // alert(imageBase64Stringsep);
+      alert(imageBase64Stringsep);
       // console.log(base64String);
     };
     reader.readAsDataURL(file);
