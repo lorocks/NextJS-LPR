@@ -26,7 +26,7 @@ function Test({ info }) {
 
       let imageBase64Stringsep = base64String;
 
-      alert(imageBase64Stringsep);
+      // alert(imageBase64Stringsep);
       fetch("https://ll753-flaskmlbackendlpr.hf.space/uploadlicense", {
         method: "POST",
         headers: {
@@ -67,7 +67,7 @@ function Test({ info }) {
 
   async function displayString(e) {
     e.preventDefault();
-    alert(base64String);
+    // alert(base64String);
 
     // fetch("https://ll753-flaskmlbackendlpr.hf.space/test")
     //   .then((response) => response.json())
