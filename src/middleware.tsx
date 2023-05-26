@@ -40,5 +40,5 @@ export function middleware(request: NextRequest) {
   //   }
 }
 export const config = {
-  matcher: ["/", "/licenses", "/licenses/:path*"],
+  matcher: ["/", "/licenses"],
 };
