@@ -146,7 +146,7 @@ function Test({ info }) {
               className="rounded-md px-4 py-1 text-white bg-orange-400 hover:bg-orange-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
               onClick={displayString}
             >
-              Display String
+              Get Inference
             </button>
           </div>
         </div>
