@@ -49,6 +49,20 @@ function Test({ info }) {
 
   function editResponse(info) {
     setRespVal(`Status: ${info.status}, Comments: ${info.comments}`);
+    
+    if (Object.keys(info).length == 3) {
+      if (
+        window.confirm(
+          'If you click "ok" you would be redirected to view the results. Cancel will load this website '
+        )
+      ) {
+        window.location.href = window.location.href.replace(
+          "test",
+          `licenses/${info.image}`
+        );
+      }
+    }
+    
   }
 
   async function displayString(e) {
