@@ -1,4 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+The project contains the frontend for License Plate Detection for Raspberry Pi Project found [here](https://github.com/lorocks/LPD-for-RPi).
+Hosted using Vercel [here](nextjs-lpr.vercel.app).
 
 ## Getting Started
 
